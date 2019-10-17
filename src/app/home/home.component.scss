@@ -1,0 +1,60 @@
+.home-page {
+  padding: 32px;
+  box-sizing: border-box;
+  font-family: 'Raleway';
+  color: white;
+  
+  & h4 {
+    font-weight: normal;
+    font-size: 300%;
+    // font-family: 'Comfortaa';
+    letter-spacing: 7.5px;
+  }
+  
+  & h2 {
+    // font-family: 'Poiret One';
+    // font-family: 'Indie Flower';
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 350%;
+  }
+
+  & > .header {
+    margin: 12vh 0 0 0;
+    width: 100%;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  background: #F7AB96;
+  background: rgb(250, 105, 100);
+  height: 100vh;
+  width: 100%;
+}
+
+// background: rgb(89, 217, 243);
+// background: #E8C4BC;
+// background: #83DAD2;
+// background: #F4554F;
+// background: #42CDB2;
+
+// font-family: 'Indie Flower';
+// font-family: 'Gochi Hand';
+// font-family: 'Handlee';
+// font-family: 'Long Cang';
+// font-family: 'Architects Daughter';
+// font-family: 'Annie Use Your Telescope';
+// font-family: 'The Girl Next Door';
+
+// font-family: 'Advent Pro';
+// font-family: 'Comfortaa';
+// font-family: 'Didact Gothic';
+// font-family: 'Poiret One';
+// font-family: 'Raleway';

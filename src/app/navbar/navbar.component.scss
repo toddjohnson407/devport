@@ -1,0 +1,52 @@
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(250, 105, 100);
+  padding: 12 0px;
+
+  & > .logo {
+    margin-left: 24px;
+    margin: 8px 0 0 24px;
+    & > img {
+      &:hover {
+        cursor: pointer;
+        opacity: 0.75;
+      }
+      &:focus { outline: none }
+      outline: none;
+      width: 85px;
+    }
+  }
+
+  & > .opts {
+    margin-right: 24px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Raleway';
+    font-size: 120%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & > a.opt {
+      padding: 8px;
+      transition-delay: 500ms;
+      transition: transform 2s, background 1s, color 1s;
+      color: white;
+      letter-spacing: 1.5px;
+      margin: 0 24px;
+      color: white;
+      text-decoration: none;
+      &:hover {
+        cursor: pointer;
+        transform: rotateY(360deg);
+        background: #ffffff;
+        color: rgb(250, 105, 100) !important;
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+}
