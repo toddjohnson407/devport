@@ -4,6 +4,6 @@
     <img src="../../assets/images/devport-logo.png" alt="Todd Johnson" id="port-logo" routerLink="/">
   </div>
   <div class="opts">
-    <a class="opt" *ngFor="let opt of navOpts;"[routerLink]="opt.path">{{ opt.title }}</a>
+    <!-- <a class="opt" *ngFor="let opt of navOpts;" [@navOptHov]="opt.isHov | async ? 'hov' : 'nohov'" (mouseenter)="triggerHover(opt)" (mouseleave)="offHover(opt)" [routerLink]="opt.path" routerLinkActive="opt-active">{{ opt.title }}</a> -->
   </div>
 </div>

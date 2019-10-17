@@ -1,18 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { optHov } from '../animations';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
+  animations: [ optHov ]
 })
 export class NavbarComponent implements OnInit {
 
   /** Array of navbar options with a title and path route */
-  navOpts: Array<any> = [
-    { title: 'Services', path: 'services' },
-    { title: 'Portfolio', path: 'portfolio' },
-    { title: 'About Me', path: 'about' },
-    { title: 'Contact', path: 'contact' }
+  navOpts: Array<{ title: string, path: string, isHov: Observable<boolean> }> = [
+    { title: 'Services', path: '/services', isHov: of(false) },
+    { title: 'Portfolio', path: '/portfolio', isHov: of(false) },
+    { title: 'About Me', path: '/about', isHov: of(false) },
+    { title: 'Contact', path: '/contact', isHov: of(false) }
   ]
 
   constructor() { }
@@ -20,4 +23,18 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
+  /** Nav opt on hover event listener */
+  triggerHover(opt: any): void {
+    console.log(opt);
+    // if (!this.navOpts.find(({ isHov }) => isHov === true)) {
+      // this.navOpts.find(o => o.title === opt.title).isHov = true;
+    // }
+  }
+
+  /** Nav opt off hover event listener */
+  offHover(): void {
+    
+    // opt.isHov = false;
+    console.log(this.navOpts);
+  }
 }

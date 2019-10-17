@@ -6,7 +6,7 @@
   align-items: center;
   background: rgb(250, 105, 100);
   padding: 12 0px;
-
+  
   & > .logo {
     margin-left: 24px;
     margin: 8px 0 0 24px;
@@ -20,7 +20,7 @@
       width: 85px;
     }
   }
-
+  
   & > .opts {
     margin-right: 24px;
     color: white;
@@ -31,22 +31,26 @@
     justify-content: space-between;
     align-items: center;
     & > a.opt {
+      border: 2px solid transparent;
       padding: 8px;
-      transition-delay: 500ms;
-      transition: transform 2s, background 1s, color 1s;
+      // transition-delay: 500ms;
+      // transition: transform 2s, background 1s, color 1s;
       color: white;
       letter-spacing: 1.5px;
       margin: 0 24px;
-      color: white;
       text-decoration: none;
       &:hover {
         cursor: pointer;
-        transform: rotateY(360deg);
-        background: #ffffff;
-        color: rgb(250, 105, 100) !important;
+        // opacity: 0.65;
+        // transform: rotateY(360deg);
+        // background: #ffffff;
+        // color: rgb(250, 105, 100) !important;
         text-decoration: none;
-        color: inherit;
       }
     }
   }
+}
+
+.opt-active {
+  border: 2px solid white !important;
 }
