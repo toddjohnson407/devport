@@ -10,10 +10,12 @@ import { Observable, of } from 'rxjs';
 })
 export class NavbarComponent implements OnInit {
 
+  menuClicked: boolean = false;
+
   /** Array of navbar options with a title and path route */
   navOpts: Array<{ title: string, path: string, isHov: Observable<boolean> }> = [
-    { title: 'Services', path: '/services', isHov: of(false) },
     { title: 'Portfolio', path: '/portfolio', isHov: of(false) },
+    { title: 'Services', path: '/services', isHov: of(false) },
     { title: 'About Me', path: '/about', isHov: of(false) },
     { title: 'Contact', path: '/contact', isHov: of(false) }
   ]
@@ -33,8 +35,10 @@ export class NavbarComponent implements OnInit {
 
   /** Nav opt off hover event listener */
   offHover(): void {
-    
     // opt.isHov = false;
     console.log(this.navOpts);
   }
+
+  toggleMenu = (): any => this.menuClicked = !this.menuClicked;
+
 }

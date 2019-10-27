@@ -29,6 +29,22 @@
     
   }
 
+  & > .quick-links {
+    margin-top: 24px;
+    & > a.opt {
+      border: 2px solid white;
+      padding: 24px;
+      margin: 0 24px;
+      font-size: 125%;
+      color: white;
+      text-decoration: none;
+      &:hover {
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+  }
+
   display: flex;
   align-items: center;
   justify-content: flex-start;

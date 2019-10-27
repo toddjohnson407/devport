@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  /** Array of quick link options with a title and path route */
+  quickOpts: Array<{ title: string, path: string }> = [
+    { title: 'Portfolio', path: '/portfolio' },
+    { title: 'Services', path: '/services' },
+    { title: 'Learn More', path: '/about' },
+    { title: 'Contact', path: '/contact' }
+  ]
+
+
   constructor() { }
 
   ngOnInit() {
