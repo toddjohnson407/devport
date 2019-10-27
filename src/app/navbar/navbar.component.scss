@@ -32,6 +32,14 @@
 
     &.menu-active {
       & > svg {
+        & > circle.circle {
+          stroke: white;
+          stroke-width: 0px;
+          &.circle-active {
+            transition: stroke-width 1s;
+            stroke-width: 5px;
+          }
+        }
         z-index: 11;
         & > path:nth-child(1) {
           transition: transform 1s;

@@ -15,10 +15,17 @@ export class HomeComponent implements OnInit {
     { title: 'Contact', path: '/contact' }
   ]
 
+  /** Array of characters for my name */
+  nameChars: Array<any> = 'Todd'.split('');
 
-  constructor() { }
+  nameCharRefs: Array<Object>;
+
+  constructor() {
+    // this.nameChars = 'Todd'.split('');
+  }
 
   ngOnInit() {
+    // this.nameCharRefs = this.nameChars.map((char, ind) => ({ letter: char, class: 'letter' + ind,  }))
   }
 
 }
