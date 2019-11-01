@@ -1,3 +1,24 @@
 /* Global Styles */
 
-body { padding: 0 !important; margin: 0 !important; }
+body { padding: 0 !important; margin: 0 !important; font-family: 'Raleway'; }
+
+.page-card {
+  color: rgb(250, 105, 100);
+  background: white;
+  margin: auto;
+  width: 75%;
+  height: 70vh;
+  border-radius: 12px;
+  p.title {
+    font-size: 220%;
+    font-weight: bold;
+    padding: 48px 0 0 48px;
+    margin: 0;
+  }
+
+  & > .page-content {
+    // margin: 24px auto;
+    margin-top: 24px
+  }
+
+}

@@ -7,7 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicesComponent implements OnInit {
 
-  constructor() { }
+
+  /** Array of services */
+  services: any[];
+
+  constructor() {
+    this.services = [
+      { title: 'Web Development' },
+      { title: 'Mobile Development' },
+      { title: 'Database Design' },
+    ]
+  }
 
   ngOnInit() {
   }

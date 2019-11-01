@@ -7,85 +7,13 @@
   & h4 {
     font-weight: normal;
     font-size: 300%;
-    // font-family: 'Comfortaa';
     letter-spacing: 7.5px;
   }
   
   & h2 {
-    // font-family: 'Poiret One';
-    // font-family: 'Indie Flower';
     letter-spacing: 5px;
     font-weight: bold;
     font-size: 350%;
-
-    // & > span.letter {
-    //   // transition: all 2.5s;
-    //   position: relative;
-    //   // overflow: hidden;
-    //   margin: 0 !important;
-    //   &:nth-child(1) {
-
-    //     // top: -1000;
-    //     // left: 500;
-    //     // animation: fly 2s;
-    //     margin: -1000px 0 0 -1450px;
-    //     animation: flyintopleft 2s;
-    //     // animation-delay: 1s;
-    //   }
-    //   &:nth-child(2) {
-    //     // margin-left: -140px;
-    //     animation: flyintopright 2s;
-    //     // animation: flyintopleft 2s;
-    //     // animation-delay: 1s;
-    //   }
-    //   &:nth-child(3) {
-    //     // margin-left: -1100px;
-    //     animation: flyinbottomleft 2s;
-    //     // animation: flyintopleft 2s;
-    //     // animation-delay: 1s;
-    //   }
-    //   &:nth-child(4) {
-    //     // margin-left: -1200px;
-    //     animation: flyinbottomright 2s;
-    //     // animation: flyintopleft 2s;
-    //     // animation-delay: 1s;
-    //   }
-
-    //   @keyframes fly {
-    //     from {
-    //       top: -1000;
-    //       bottom: 500;
-    //     }
-    //     to {
-    //       top: 0 !important;
-    //       bottom: 0 !important;
-    //     }
-    //   }
-
-    //   @keyframes flyin {
-    //     from {margin-left: -100%; }
-    //     to {margin: 0}
-    //   }
-
-    //   @keyframes flyintopleft {
-    //     from {margin: 1450px 0 0 900px}
-    //     to {margin: 0}
-    //   }
-    //   @keyframes flyintopright {
-    //     from {margin: -1000px 0 0 0; }
-    //     to {margin: 0}
-    //   }
-    //   @keyframes flyinbottomleft {
-    //     from {margin: 0 0 -900px -1200px}
-    //     to {margin: 0}
-    //   }
-    //   @keyframes flyinbottomright {
-    //     from {margin: 0 -1600px -800px 0}
-    //     to {margin: 0}
-    //   }
-
-    // }
-
   }
 
   & > .header {

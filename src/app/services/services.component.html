@@ -1,2 +1,15 @@
 
-<div class="services-page"></div>
+<div class="services-page">
+
+  <div class="page-card">
+    <p class="title">Services</p>
+    <div class="page-content">
+      <div class="service-cards">
+        <div class="service-card" *ngFor="let service of services">
+          <div class="service-title">{{ service.title }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
