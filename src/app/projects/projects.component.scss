@@ -1,6 +1,139 @@
 
-div {
-  height: 100vh;
+div.projects-page {
+  // height: 100vh;
   width: 100%;
-  background: purple;
+}
+
+div.projects-intro {
+
+  width: 100%;
+  padding-top: 24px;
+
+  & > .projects-header {
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > .projects-title {
+      font-size: 300%;
+      color: #ffff;
+      letter-spacing: 4px;
+      font-weight: bold;
+    }
+  }
+
+  & > .projects-info {
+    height: 50vh;
+    background: #ffff;
+    // background: #CAD9F5;
+    & > .info-header {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      
+      div { text-align: center; }
+      & > div:nth-child(1) {
+        font-size: 220%;
+        font-weight: bold;
+        color: rgb(250, 105, 100);
+        margin-bottom: 8px;
+      }
+      div:nth-child(2) {
+        margin-top: 8px;
+        font-size: 110%;
+        max-width: 80%;
+        letter-spacing: 1px;
+        width: 500px;
+      }
+      img {
+        margin: 0 0 48px;
+        width: 80px;
+      }
+    }
+  }
+
+}
+
+
+
+div.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: white; 
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  
+  padding: 24px 0;
+  box-sizing: border-box;
+
+  & > .project-header {
+
+    color: #ffff;
+    margin: 0 0 48px;
+    text-align: center;
+
+    & > .project-title {
+      font-size: 300%;
+      font-weight: bold;
+      margin-bottom: 24px;
+      font-variant: small-caps;
+    }
+    & > .project-description {
+      font-size: 120%;
+      width: 55%;
+      margin: auto;
+    }
+  }
+
+  & > .project-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 100%;
+    & > img {
+      width: 200px;
+      margin: 0 24px;
+    }
+  }
+}
+
+
+.overlay-images {
+  
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-flow: row wrap;
+  
+  @media all and (min-width: 1100px) {  
+    & > :first-child { width: 50% }
+    & > :last-child {
+      margin-left: -100px;
+      width: 35%;
+    }
+  }
+  @media all and (max-width: 1099px) {
+    & > img {
+      width: 80%;
+      margin: 24px 0;
+    }
+  }
+  
+}
+
+#sub-out-card { background: #00C8AA; }
+#atl-card { background: #019CBB; }
+#fj-card {
+  background: #02804D;
+  & img {
+    width: 60%;
+  }
 }

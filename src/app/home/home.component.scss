@@ -52,6 +52,26 @@
   width: 100%;
 }
 
+.home-info-page {
+  height: 100vh;
+  width: 100%;
+  background: aqua;
+}
+
+.nav-btn {
+  width: 60px;
+  // position: absolute;
+  // right: calc(50vw - (60px / 2));
+  // bottom: 12%;
+  // z-index: 16;
+  padding: 0px;
+  transition: padding 450ms;
+  &:hover {
+    cursor: pointer;
+    padding: 12px 0;
+  }
+}
+
 // background: rgb(89, 217, 243);
 // background: #E8C4BC;
 // background: #83DAD2;

@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { slideUpAnimation } from '../animations';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  animations: [slideUpAnimation]
 })
 export class HomeComponent implements OnInit {
 
@@ -20,12 +22,19 @@ export class HomeComponent implements OnInit {
 
   nameCharRefs: Array<Object>;
 
+  /** Tracks whether the user is on the initial landing screen */
+  landingScreen: boolean = true;
+
   constructor() {
     // this.nameChars = 'Todd'.split('');
   }
 
   ngOnInit() {
     // this.nameCharRefs = this.nameChars.map((char, ind) => ({ letter: char, class: 'letter' + ind,  }))
+  }
+
+  toggleScreen() {
+    this.landingScreen = !this.landingScreen;
   }
 
 }

@@ -10,6 +10,11 @@
   </div>
 
   <div class="quick-links">
+    <img src="assets/svgs/nav-arrow.svg" alt="Learn More" class="nav-btn" (click)="toggleScreen()">
     <!-- <a class="opt" *ngFor="let opt of quickOpts;" [routerLink]="opt.path">{{ opt.title }}</a> -->
   </div>
+</div>
+
+<div class="home-info-page" [@slideUp]="landingScreen ? 'out' : 'vis'" [style.display]="landingScreen ? 'none' : 'block'">
+
 </div>

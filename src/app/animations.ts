@@ -35,6 +35,18 @@ export const optHov =
     ])
   ]);
 
+export const slideUpAnimation =
+  trigger('slideUp', [
+    state('vis', style({
+      transform: 'translateY(-100%)'
+    })),
+    state('out', style({
+      transform: 'translateY(0)'
+    })),
+    transition('out => vis', [ animate('600ms') ]),
+    transition('vis => out', [ animate('600ms') ])
+  ]);
+
 /** page transition animation */
 export const slideInAnimation =
   trigger('routeAnimations', [
