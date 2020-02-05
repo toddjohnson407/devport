@@ -1,18 +1,18 @@
 
 <div class="home-page">
   <div class="header">
-    <h2>
-        <!-- <span *ngFor="let letter of nameChars; index as i" class="letter" [ngClass]="['letter', ('letter' + i)]">{{ letter }}</span> -->
-      Hi, I'm
-      Todd.
-    </h2>
+    <!-- <h2>
+      <span *ngFor="let letter of nameChars; index as i" class="letter" [ngClass]="['letter', ('letter' + i)]">{{ letter }}</span>
+    </h2> -->
+    <h2>Hi, I'm Todd</h2>
     <h4 class="job-title">Developer | Programmer | Designer</h4>
   </div>
 
-  <div class="quick-links">
+  <img src="assets/images/spacetaller.png" class="home-bg">
+
+  <!-- <div class="quick-links">
     <img src="assets/svgs/nav-arrow.svg" alt="Learn More" class="nav-btn" (click)="toggleScreen()">
-    <!-- <a class="opt" *ngFor="let opt of quickOpts;" [routerLink]="opt.path">{{ opt.title }}</a> -->
-  </div>
+  </div> -->
 </div>
 
 <div class="home-info-page" [@slideUp]="landingScreen ? 'out' : 'vis'" [style.display]="landingScreen ? 'none' : 'block'">

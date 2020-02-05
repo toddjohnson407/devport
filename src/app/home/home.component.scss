@@ -4,26 +4,45 @@
   font-family: 'Raleway';
   color: white;
   
+  & img.home-bg {
+    max-height: 60vh;
+    max-width: 100%;
+    margin-bottom: 48px;
+  }
+
+  & h2, h4 {
+    padding: 0;
+    margin: 0;
+  }
+
   & h4 {
     font-weight: normal;
-    font-size: 300%;
+    font-size: 200%;
     letter-spacing: 7.5px;
   }
   
   & h2 {
+    margin-bottom: 24px;
     letter-spacing: 5px;
     font-weight: bold;
-    font-size: 350%;
+    font-size: 250%;
   }
 
   & > .header {
-    margin: 12vh 0 0 0;
+    margin: 24px 0 24px;
     width: 100%;
+
     flex-wrap: nowrap;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    justify-content: flex-start;
+
+    // background: url('/assets/images/spacewide.png');
+    // background-size: contain;
+    // background-position: center;
+    // background-repeat: no-repeat;
+
   }
 
   & > .quick-links {
@@ -46,8 +65,8 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  background: #F7AB96;
-  background: rgb(250, 105, 100);
+  // background: #F7AB96;
+  // background: rgb(250, 105, 100);
   height: 100vh;
   width: 100%;
 }
