@@ -27,7 +27,6 @@ export class ContactComponent implements OnInit {
   }
 
   sendEmail() {
-    console.log('sent');
 
     let emailData = {
       usersName: this.contactForm.get('name').value,
@@ -35,7 +34,11 @@ export class ContactComponent implements OnInit {
       usersMessage: this.contactForm.get('message').value,
     }
 
-    emailjs.send('default_service', 'inquiry_template', emailData, 'user_jNFuefEFTbVTttVQlDw20').then(res => console.log('yay', res)).catch(err => console.log('err', err))
+    emailjs.send('default_service', 'inquiry_template', emailData, 'user_jNFuefEFTbVTttVQlDw20').then(res => {
+      console.log('Email sent.')
+    }).catch(err => {
+      console.log('Error:', err)
+    })
 
   }
 
