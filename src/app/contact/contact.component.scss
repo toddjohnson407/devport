@@ -32,6 +32,8 @@
 
 .contact-message {
   margin-top: 16px;
+  color: rgb(250, 105, 100);
+
   &:focus { outline: none; border-bottom: 2px solid rgb(250, 105, 100); }
   border: none;
   border-bottom: 2px solid grey;
