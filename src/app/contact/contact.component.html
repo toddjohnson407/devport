@@ -1,2 +1,13 @@
 
-<div class="contact-page"></div>
+<div class="contact-page">
+
+  <form [formGroup]="contactForm" (ngSubmit)="sendEmail()" class="contact-form">
+
+    <input type="text" class="contact-input" placeholder="Name" formControlName="name">
+    <input type="text" class="contact-input" placeholder="Email" formControlName="email">
+    <textarea class="contact-message" placeholder="Message" rows="3" formControlName="message"></textarea>
+
+    <!-- <button>sdkljf</button> -->
+  </form>
+
+</div>

@@ -27,7 +27,7 @@ export class NavbarComponent implements OnInit {
 
   /** Nav opt on hover event listener */
   triggerHover(opt: any): void {
-    console.log(opt);
+    // console.log(opt);
     // if (!this.navOpts.find(({ isHov }) => isHov === true)) {
       // this.navOpts.find(o => o.title === opt.title).isHov = true;
     // }
@@ -36,7 +36,7 @@ export class NavbarComponent implements OnInit {
   /** Nav opt off hover event listener */
   offHover(): void {
     // opt.isHov = false;
-    console.log(this.navOpts);
+    // console.log(this.navOpts);
   }
 
   toggleMenu = (): any => this.menuClicked = !this.menuClicked;

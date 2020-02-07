@@ -1,6 +1,49 @@
 
-div {
-  height: 100vh;
+.contact-page {
   width: 100%;
-  background: teal;
+  height: 70vh;
+  background: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contact-form {
+  background: #ffff;
+  padding: 48px;
+  width: max-content;
+  border-radius: 8px;
+
+  & > .contact-input {
+
+    &:focus { outline: none; border-bottom: 2px solid rgb(250, 105, 100); }
+    border: none;
+    margin-bottom: 16px;
+    height: 125%;
+    font-size: 110%;
+    display: block;
+    width: 500px;
+    max-width: 70vw;
+    border-bottom: 2px solid grey;
+    padding-bottom: 8px;
+    color: rgb(250, 105, 100);
+  }
+}
+
+.contact-message {
+  margin-top: 16px;
+  &:focus { outline: none; border-bottom: 2px solid rgb(250, 105, 100); }
+  border: none;
+  border-bottom: 2px solid grey;
+
+  resize: none;
+  font-size: 110%;
+  width: 500px;
+  max-width: 70vw;
+  padding-bottom: 8px;
+  box-sizing: border-box;
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+  color: rgb(250, 105, 100);
 }

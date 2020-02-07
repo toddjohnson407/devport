@@ -7,21 +7,6 @@ div.projects-page {
 div.projects-intro {
 
   width: 100%;
-  padding-top: 24px;
-
-  & > .projects-header {
-    height: 35vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    & > .projects-title {
-      font-size: 300%;
-      color: #ffff;
-      letter-spacing: 4px;
-      font-weight: bold;
-    }
-  }
 
   & > .projects-info {
     height: 50vh;
