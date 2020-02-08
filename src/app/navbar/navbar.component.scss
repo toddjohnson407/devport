@@ -1,72 +1,75 @@
 
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 24px;
+
+  margin-right: 24px;
+  z-index: 1000;
+  & > svg {
+    &:hover {
+      cursor: pointer;
+    //   & > path:nth-child(2) {
+    //     transition: opacity 0.5s ease-in-out;
+    //     opacity: 0;
+    //   }
+    //   & > path:nth-child(3) {
+    //     transition: transform 1s;
+    //     transform: translate(25px, -40%) rotate(90deg);
+    //     // transform-origin: 50% 50%;
+    //   }
+    }
+    width: 45px;
+    & > path:nth-child(1) {
+      transform-origin: 40px 40px;
+      transition: transform 1s;
+      transform: rotate(0deg);
+    }
+    & > path:nth-child(2) {
+      transition: opacity 0.5s ease-in-out;
+      height: auto;
+    }
+    & > path:nth-child(3) {
+      transform-origin: 40px 90px;
+      transition: transform 1s;
+      transform: rotate(0deg);
+    }
+  }
+
+  &.menu-active {
+    & > svg {
+      & > circle.circle {
+        stroke: white;
+        stroke-width: 0px;
+        &.circle-active {
+          transition: stroke-width 1s;
+          stroke-width: 5px;
+        }
+      }
+      z-index: 11;
+      & > path:nth-child(1) {
+        transition: transform 1s;
+        transform: rotate(45deg);
+      }
+      & > path:nth-child(2) {
+        transition: opacity 0.5s ease-in-out;
+        opacity: 0;
+      }
+      & > path:nth-child(3) {
+        transition: transform 1s;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
 .navbar {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgb(250, 105, 100);
   padding: 12 0px;
-  
-
-  & .menu {
-    margin-right: 24px;
-    z-index: 1000;
-    & > svg {
-      &:hover {
-        cursor: pointer;
-      //   & > path:nth-child(2) {
-      //     transition: opacity 0.5s ease-in-out;
-      //     opacity: 0;
-      //   }
-      //   & > path:nth-child(3) {
-      //     transition: transform 1s;
-      //     transform: translate(25px, -40%) rotate(90deg);
-      //     // transform-origin: 50% 50%;
-      //   }
-      }
-      width: 45px;
-      & > path:nth-child(1) {
-        transform-origin: 40px 40px;
-        transition: transform 1s;
-        transform: rotate(0deg);
-      }
-      & > path:nth-child(2) {
-        transition: opacity 0.5s ease-in-out;
-        height: auto;
-      }
-      & > path:nth-child(3) {
-        transform-origin: 40px 90px;
-        transition: transform 1s;
-        transform: rotate(0deg);
-      }
-    }
-
-    &.menu-active {
-      & > svg {
-        & > circle.circle {
-          stroke: white;
-          stroke-width: 0px;
-          &.circle-active {
-            transition: stroke-width 1s;
-            stroke-width: 5px;
-          }
-        }
-        z-index: 11;
-        & > path:nth-child(1) {
-          transition: transform 1s;
-          transform: rotate(45deg);
-        }
-        & > path:nth-child(2) {
-          transition: opacity 0.5s ease-in-out;
-          opacity: 0;
-        }
-        & > path:nth-child(3) {
-          transition: transform 1s;
-          transform: rotate(-45deg);
-        }
-      }
-    }
-  }
 
   & > .sidenav {
     height: 100%;
@@ -81,7 +84,6 @@
 
     &.sidenav-active {
       width: 250px;
-      // width: 100%;
     }
 
     & > .opts {

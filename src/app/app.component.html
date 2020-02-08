@@ -1,7 +1,14 @@
 
-<app-navbar></app-navbar>
-<app-page-header></app-page-header>
-<div [@routeAnimations]="o && o.activatedRouteData 
+<div>
+  <app-navbar [home]="home" [portfolio]="portfolio" [contact]="contact" [services]="services"></app-navbar>
+  <!-- <app-page-header></app-page-header> -->
+  <div #home><app-home></app-home></div>
+  <div #services><app-services></app-services></div>
+  <div #portfolio><app-projects></app-projects></div>
+  <div #contact><app-contact></app-contact></div>
+</div>
+
+<!-- <div [@routeAnimations]="o && o.activatedRouteData 
       && o.activatedRouteData['animation']">
     <router-outlet #o="outlet"></router-outlet>
-</div>
+</div> -->

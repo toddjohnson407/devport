@@ -1,15 +1,19 @@
 
 <div class="services-page">
 
-  <div class="page-card">
-    <p class="title">Services</p>
-    <div class="page-content">
-      <div class="service-cards">
-        <div class="service-card" *ngFor="let service of services">
-          <div class="service-title">{{ service.title }}</div>
-        </div>
+  <div class="services-header">
+    <div class="services-title">What I do.</div>
+    <div class="services-intro">I like to build websites and mobile apps. </div>
+  </div>
+
+  <div class="services-ctn">
+    <div class="service" *ngFor="let service of services">
+      <div>
+        <div class="service-img"><img [src]="service.image" alt="Innovation"></div>
+        <div class="service-name">{{ service.title }}</div>
       </div>
     </div>
   </div>
+
 
 </div>

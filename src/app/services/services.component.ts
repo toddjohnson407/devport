@@ -13,9 +13,9 @@ export class ServicesComponent implements OnInit {
 
   constructor() {
     this.services = [
-      { title: 'Web Development' },
-      { title: 'Mobile Development' },
-      { title: 'Database Design' },
+      { title: 'Web Development', image: 'assets/images/webdesign.png' },
+      { title: 'Mobile Development', image: 'assets/images/mobiledesign.png' },
+      { title: 'Database Design', image: 'assets/images/databasedesign.png' },
     ]
   }
 

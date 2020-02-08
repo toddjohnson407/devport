@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { slideInAnimation } from './animations';
 import { RouterOutlet, ActivatedRoute, ParamMap } from '@angular/router';
 
@@ -13,12 +13,4 @@ export class AppComponent {
 
   title = 'devport';
 
-  // constructor (
-  //   private route: ActivatedRoute
-  // ) { }
-
-  // ngOnInit() {
-  //   this.route.params.subscribe((param: ParamMap) => console.log('App route param:', param))
-  //   this.route.paramMap.subscribe((param: ParamMap) => console.log('App route param:', param))
-  // }
 }

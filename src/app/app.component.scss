@@ -4,5 +4,14 @@
     outline: none;
   }
   background: rgb(250, 105, 100);
-
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+// div {
+//   & > div {
+//     min-height: 100vh;
+//   }
+// }

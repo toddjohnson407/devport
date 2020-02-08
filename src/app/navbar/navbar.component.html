@@ -1,44 +1,45 @@
 
+<div [ngClass]="menuClicked ? 'menu menu-active' : 'menu'" (click)="toggleMenu()">
+  <svg viewBox="0 15 125 105" xmlns="http://www.w3.org/2000/svg">
+    <path d="
+      M 40 40
+      C 40,40 30,45 40,50
+      H 100
+      C 100,50 110,45 100,40
+      H 40
+      L 40 40
+    Z" style="fill: white; stroke: none"/>
+
+    <path d="
+      M 40 60
+      C 40,60 30,65 40,70
+      H 100
+      C 100,70 110,65 100,60
+      H 40
+      L 40 60
+    " style="fill: white; stroke: none"/>
+    <path d="
+      M 40 80
+      C 40,80 30,85 40,90
+      H 100
+      C 100,90 110,85 100,80
+      H 40
+    Z" style="fill: white; stroke: none"/>
+    <circle [ngClass]="menuClicked ? 'circle circle-active' : 'circle'" cx=57.5 cy=65 r=47 style="fill: none"/>
+  </svg>
+
+</div>
+  
+
 <div class="navbar">
   <div class="logo">
     <img src="/assets/images/devport-logo.png" alt="Todd Johnson" id="port-logo" routerLink="/">
   </div>
-  <div [ngClass]="menuClicked ? 'menu menu-active' : 'menu'" (click)="toggleMenu()">
-    <svg viewBox="0 15 125 105" xmlns="http://www.w3.org/2000/svg">
-      <path d="
-        M 40 40
-        C 40,40 30,45 40,50
-        H 100
-        C 100,50 110,45 100,40
-        H 40
-        L 40 40
-      Z" style="fill: white; stroke: none"/>
-
-      <path d="
-        M 40 60
-        C 40,60 30,65 40,70
-        H 100
-        C 100,70 110,65 100,60
-        H 40
-        L 40 60
-      " style="fill: white; stroke: none"/>
-      <path d="
-        M 40 80
-        C 40,80 30,85 40,90
-        H 100
-        C 100,90 110,85 100,80
-        H 40
-      Z" style="fill: white; stroke: none"/>
-      <circle [ngClass]="menuClicked ? 'circle circle-active' : 'circle'" cx=57.5 cy=65 r=47 style="fill: none"/>
-    </svg>
-    <!-- <svg viewBox="30 40 80 50" xmlns="http://www.w3.org/2000/svg">
-    </svg> -->
-
-  </div>
 
   <div [ngClass]="menuClicked ? 'sidenav sidenav-active' : 'sidenav'">
     <div class="opts">
-      <a class="opt" (click)="toggleMenu()" *ngFor="let opt of navOpts;" [@navOptHov]="(opt.isHov | async) ? 'hov' : 'nohov'" (mouseenter)="triggerHover(opt)" (mouseleave)="offHover(opt)" [routerLink]="opt.path" routerLinkActive="opt-active">{{ opt.title }}</a>
+      <a [class]="opt.isActive ? 'opt opt-active' : 'opt'" (click)="toggleMenu()" *ngFor="let opt of navOpts;" [@navOptHov]="(opt.isHov | async) ? 'hov' : 'nohov'" (mouseenter)="triggerHover(opt)" (mouseleave)="offHover(opt)" (click)="navScroll(opt)" routerLinkActive="opt-active">{{ opt.title }}</a>
+      <!-- <a class="opt" (click)="toggleMenu()" *ngFor="let opt of navOpts;" [@navOptHov]="(opt.isHov | async) ? 'hov' : 'nohov'" (mouseenter)="triggerHover(opt)" (mouseleave)="offHover(opt)" [routerLink]="opt.path" routerLinkActive="opt-active">{{ opt.title }}</a> -->
       <a href="https://github.com/toddjohnson407" target="_blank" class="opt"><img src="/assets/images/GitHub-Mark-Light-64px.png" class="github" alt="Github"></a>
     </div>
   </div>

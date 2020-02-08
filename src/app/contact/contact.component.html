@@ -3,11 +3,13 @@
 
   <form [formGroup]="contactForm" (ngSubmit)="sendEmail()" class="contact-form">
 
+    <div class="contact-header">Interested in working together?</div>
+
     <input type="text" class="contact-input" placeholder="Name" formControlName="name">
     <input type="text" class="contact-input" placeholder="Email" formControlName="email">
     <textarea class="contact-message" placeholder="Message" rows="3" formControlName="message"></textarea>
 
-    <!-- <button>sdkljf</button> -->
+    <button class="contact-btn" type="button">Send Inquiry</button>
   </form>
 
 </div>
