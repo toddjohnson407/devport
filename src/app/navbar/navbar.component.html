@@ -38,7 +38,7 @@
 
   <div [ngClass]="menuClicked ? 'sidenav sidenav-active' : 'sidenav'">
     <div class="opts">
-      <a [class]="opt.isActive ? 'opt opt-active' : 'opt'" (click)="toggleMenu()" *ngFor="let opt of navOpts;" [@navOptHov]="(opt.isHov | async) ? 'hov' : 'nohov'" (mouseenter)="triggerHover(opt)" (mouseleave)="offHover(opt)" (click)="navScroll(opt)" routerLinkActive="opt-active">{{ opt.title }}</a>
+      <a [class]="opt.isActive ? 'opt opt-active' : 'opt'" (click)="toggleMenu()" *ngFor="let opt of navOpts;" [@navOptHov]="(opt.isHov | async) ? 'hov' : 'nohov'" (click)="navScroll(opt)">{{ opt.title }}</a>
       <!-- <a class="opt" (click)="toggleMenu()" *ngFor="let opt of navOpts;" [@navOptHov]="(opt.isHov | async) ? 'hov' : 'nohov'" (mouseenter)="triggerHover(opt)" (mouseleave)="offHover(opt)" [routerLink]="opt.path" routerLinkActive="opt-active">{{ opt.title }}</a> -->
       <a href="https://github.com/toddjohnson407" target="_blank" class="opt"><img src="/assets/images/GitHub-Mark-Light-64px.png" class="github" alt="Github"></a>
     </div>
