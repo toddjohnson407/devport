@@ -1,9 +1,7 @@
 
-<div style="height: 12vh; display: flex; justify-content: center; align-items: center; color: white; font-weight: bold;">Todd Johnson</div>
+<div class="contact-page">
 
-<!-- <div class="contact-page">
-
-  <form [formGroup]="contactForm" (ngSubmit)="sendEmail()" class="contact-form">
+  <form [formGroup]="contactForm" (ngSubmit)="sendEmail()" class="contact-form" *ngIf="!inquiryResponse">
 
     <div class="contact-header">Interested in working together?</div>
 
@@ -11,7 +9,11 @@
     <input type="text" class="contact-input" placeholder="Email" formControlName="email">
     <textarea class="contact-message" placeholder="Message" rows="3" formControlName="message"></textarea>
 
-    <button class="contact-btn" type="button">Send Inquiry</button>
+    <button class="contact-btn">Send Inquiry</button>
+
+    <div class="form-error" *ngIf="errorMessage">{{ errorMessage }}</div>
   </form>
 
-</div> -->
+  <div class="inquiry-response" *ngIf="inquiryResponse">{{ inquiryResponse }}</div>
+
+</div>
