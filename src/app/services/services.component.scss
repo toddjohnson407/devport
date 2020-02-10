@@ -1,6 +1,6 @@
 
 div.services-page {
-  height: auto;
+  // height: auto;
   width: 100%;
   // background: rgb(250, 105, 100);
   // background: white;
@@ -33,6 +33,7 @@ div.services-page {
     justify-content: stretch;
     align-items: stretch;
     width: 100%;
+    overflow: hidden;
     @media all and (max-width: 1099px) {
       flex-wrap: wrap;
     }
@@ -64,16 +65,11 @@ div.services-page {
         align-items: center;
         flex-direction: column;
         height: 30vh;
-        @media all and (max-width: 1099px) {
-          // height: 100%;
-        }
       }
 
       & .service-img {
         margin-bottom: 24px;
-        & > img {
-          width: 200px;
-        }
+        & > img { width: 200px; }
       }
     }
   }
