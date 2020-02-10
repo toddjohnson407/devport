@@ -83,7 +83,11 @@
     transition: 0.5s;
 
     &.sidenav-active {
+      
       width: 250px;
+      @media all and (max-width: 700px) {
+        width: 100%;
+      }
     }
 
     & > .opts {

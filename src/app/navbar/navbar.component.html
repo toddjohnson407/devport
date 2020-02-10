@@ -1,5 +1,5 @@
 
-<div [ngClass]="menuClicked ? 'menu menu-active' : 'menu'" (click)="toggleMenu()">
+<div [ngClass]="menuClicked ? 'menu menu-active' : 'menu'" (click)="toggleMenu()" (window:scroll)="pageListen()">
   <svg viewBox="0 15 125 105" xmlns="http://www.w3.org/2000/svg">
     <path d="
       M 40 40
