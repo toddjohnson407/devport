@@ -50,7 +50,6 @@ export class NavbarComponent implements OnInit {
   /** Listens to each page element to determine when it's active */
   pageListen(): void {
     let fromTop = window.scrollY;
-    console.log('scrollY:', fromTop)
     if (document.documentElement.scrollHeight - document.documentElement.scrollTop === document.documentElement.clientHeight) {
 
       let prevActive = this.navOpts.findIndex(({isActive}, index) => isActive && index !== 3);
@@ -64,7 +63,6 @@ export class NavbarComponent implements OnInit {
           sect.offsetTop <= fromTop + 30 &&
           sect.offsetTop + sect.offsetHeight > fromTop + 30
           ) {
-          console.log(title, sect.offsetHeight, sect.offsetTop);
           this.navOpts[index]['isActive'] = true;
         }
         else this.navOpts[index]['isActive'] = false;

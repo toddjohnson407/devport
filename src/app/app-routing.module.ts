@@ -8,11 +8,11 @@ import { ServicesComponent } from './services/services.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, data: { animation: 'Home' } },
-  { path: 'portfolio', component: ProjectsComponent, data: { animation: 'Portfolio' } },
-  { path: 'contact', component: ContactComponent, data: { animation: 'Contact' } },
-  { path: 'about', component: AboutComponent, data: { animation: 'About' } },
-  { path: 'services', component: ServicesComponent, data: { animation: 'Services' } }
+  // { path: '', component: HomeComponent, data: { animation: 'Home' } },
+  // { path: 'portfolio', component: ProjectsComponent, data: { animation: 'Portfolio' } },
+  // { path: 'contact', component: ContactComponent, data: { animation: 'Contact' } },
+  // { path: 'about', component: AboutComponent, data: { animation: 'About' } },
+  // { path: 'services', component: ServicesComponent, data: { animation: 'Services' } }
 ];
 
 @NgModule({
