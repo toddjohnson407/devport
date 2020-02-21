@@ -49,6 +49,12 @@ a.learn-more {
   font-weight: bold;
   color: white;
   margin-top: 48px;
+
+  &.coming-soon {
+    border: 2px dashed white;
+    // font-weight: 400;
+    cursor: default;
+  }
 }
 
 
@@ -124,6 +130,8 @@ div.project-card {
 }
 
 #sub-out-card { background: #00C8AA; }
+// #code-plug-card { background: #52274c; }
+#code-plug-card { background: #24282E; }
 #atl-card { background: #019CBB; }
 #fj-card {
   background: #02804D;
