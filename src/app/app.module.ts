@@ -13,6 +13,7 @@ import { ServicesComponent } from './services/services.component';
 import { PageHeaderComponent } from './page-header/page-header.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
+import { GoogleAnalyticsService } from './google-analytics.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { CookieService } from 'ngx-cookie-service';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [CookieService],
+  providers: [CookieService, GoogleAnalyticsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
 import { optHov } from '../animations';
 import { Observable, of } from 'rxjs';
 
+declare var gtag;
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -11,6 +13,11 @@ import { Observable, of } from 'rxjs';
 export class NavbarComponent implements OnInit {
 
   menuClicked: boolean = false;
+
+  activeIndex: number = 0;
+
+  /** Tracks whether or not the previous scroll event has been emitted */
+  prevScrollComplete: boolean;
 
   @Input() home: ElementRef;
   @Input() portfolio: ElementRef;
@@ -23,6 +30,7 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.prevScrollComplete = true;
     this.navOpts = [
       { title: 'Home', isActive: true, element: this.home, path: '/', isHov: of(false) },
       { title: 'Services', isActive: false, element: this.services, path: '/services', isHov: of(false) },
@@ -34,7 +42,6 @@ export class NavbarComponent implements OnInit {
     
   /** Scrolls to the given section of the website */
   navScroll(navOpt: any) {
-
     let { element } = navOpt;
 
     let prevActive = this.navOpts.findIndex(({isActive}) => isActive);
@@ -49,27 +56,39 @@ export class NavbarComponent implements OnInit {
 
   /** Listens to each page element to determine when it's active */
   pageListen(): void {
-    let fromTop = window.scrollY;
-    if (document.documentElement.scrollHeight - document.documentElement.scrollTop === document.documentElement.clientHeight) {
+    if (this.prevScrollComplete) {
+      this.prevScrollComplete = false;
 
-      let prevActive = this.navOpts.findIndex(({isActive}, index) => isActive && index !== 3);
-      if (prevActive !== -1) this.navOpts[prevActive].isActive = false;
+      let fromTop = window.scrollY;
+      if (document.documentElement.scrollHeight - document.documentElement.scrollTop === document.documentElement.clientHeight) {
+        
+        let prevActive = this.navOpts.findIndex(({isActive}, index) => isActive && index !== 3);
+        if (prevActive !== -1) this.navOpts[prevActive].isActive = false;
+        
+        this.navOpts[3].isActive = true;
+        gtag('config', 'UA-148789886-1', { page_title: this.navOpts[3].title });
+  
+      } else if (fromTop > this.navOpts[0].element.offsetTop) {
 
-      this.navOpts[3].isActive = true;
+        let activeInd = this.navOpts.findIndex(({element: {offsetHeight, offsetTop}, isActive}) => {
+          if (offsetTop <= fromTop + 30 && offsetTop + offsetHeight > fromTop + 30 && isActive === false) return true;
+          return false;
+        });
+        let prevActive = this.navOpts.findIndex(({isActive}) => isActive);
 
-    } else if (fromTop > this.navOpts[0].element.offsetTop) {
-      this.navOpts.forEach(({element: sect, title}, index) => {
-        if (
-          sect.offsetTop <= fromTop + 30 &&
-          sect.offsetTop + sect.offsetHeight > fromTop + 30
-          ) {
-          this.navOpts[index]['isActive'] = true;
+        if (activeInd !== -1 && !this.navOpts[activeInd].isActive) {
+
+          gtag('config', 'UA-148789886-1', { page_title: this.navOpts[activeInd].title });
+
+          if (prevActive !== -1 && prevActive !== activeInd) this.navOpts[prevActive].isActive = false;
+          this.navOpts[activeInd].isActive = true;
         }
-        else this.navOpts[index]['isActive'] = false;
-      })
+      }
+      this.prevScrollComplete = true;
     }
   }
 
   toggleMenu = (): any => this.menuClicked = !this.menuClicked;
 
 }
+
