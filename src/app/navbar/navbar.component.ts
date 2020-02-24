@@ -39,7 +39,7 @@ export class NavbarComponent implements OnInit {
     ]
   }
 
-    
+
   /** Scrolls to the given section of the website */
   navScroll(navOpt: any) {
     let { element } = navOpt;
@@ -61,13 +61,13 @@ export class NavbarComponent implements OnInit {
 
       let fromTop = window.scrollY;
       if (document.documentElement.scrollHeight - document.documentElement.scrollTop === document.documentElement.clientHeight) {
-        
+
         let prevActive = this.navOpts.findIndex(({isActive}, index) => isActive && index !== 3);
         if (prevActive !== -1) this.navOpts[prevActive].isActive = false;
-        
+
         this.navOpts[3].isActive = true;
         gtag('config', 'UA-148789886-1', { page_title: this.navOpts[3].title });
-  
+
       } else if (fromTop > this.navOpts[0].element.offsetTop) {
 
         let activeInd = this.navOpts.findIndex(({element: {offsetHeight, offsetTop}, isActive}) => {
