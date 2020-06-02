@@ -9,7 +9,7 @@ div.projects-intro {
 
   & > .projects-info {
     height: 40vh;
-    background: #ffff;
+    background: #ffffff;
     background: rgb(90, 88, 88);
 
     & > .info-header {
@@ -75,7 +75,7 @@ div.project-card {
 
   & > .project-header {
 
-    color: #ffff;
+    color: #ffffff;
     margin: 0 0 48px;
     text-align: center;
 
@@ -129,8 +129,13 @@ div.project-card {
   
 }
 
+#logs-card { 
+  background: #3a4882;
+  & img {
+    width: 60%;
+  }
+}
 #sub-out-card { background: #00C8AA; }
-// #code-plug-card { background: #52274c; }
 #code-plug-card { background: #24282E; }
 #atl-card { background: #019CBB; }
 #fj-card {
